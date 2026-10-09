@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="16" fill="url(#bgG)" stroke="#334155" stroke-width="2"/>
+  <rect x="20" y="20" width="560" height="360" rx="12" fill="none" stroke="#475569" stroke-dasharray="6,6"/>
+  <circle cx="300" cy="120" r="45" fill="#4285f4" fill-opacity="0.15"/>
+  <text x="300" y="135" font-size="40" text-anchor="middle">🎨</text>
+  <text x="300" y="200" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="22" font-weight="700" text-anchor="middle">Google UX Design</text>
+  <text x="300" y="230" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" text-anchor="middle">Professional Certificate</text>
+  <rect x="220" y="260" width="160" height="32" rx="16" fill="#4285f4" fill-opacity="0.2"/>
+  <text x="300" y="281" fill="#60a5fa" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" text-anchor="middle">Google • 2024</text>
+  <text x="300" y="330" fill="#64748b" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" text-anchor="middle">Wireframing • Usability Testing • Figma</text>
+</svg>

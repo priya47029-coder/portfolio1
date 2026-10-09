@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="50%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#db2777"/>
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fcd34d"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="jacketGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#312e81"/>
+      <stop offset="100%" stop-color="#4338ca"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background circle with glow -->
+  <circle cx="250" cy="250" r="230" fill="url(#bgGrad)" filter="url(#shadow)"/>
+  <circle cx="250" cy="250" r="215" fill="#0f172a" fill-opacity="0.15"/>
+
+  <!-- Back Hair -->
+  <path d="M 160 210 Q 140 330 180 430 Q 250 460 320 430 Q 360 330 340 210 Z" fill="url(#hairGrad)"/>
+
+  <!-- Torso & Blazer -->
+  <path d="M 120 490 C 130 380 200 350 250 350 C 300 350 370 380 380 490 Z" fill="url(#jacketGrad)"/>
+  <!-- Inner shirt -->
+  <polygon points="215,360 250,440 285,360" fill="#ffffff"/>
+  <!-- Blazer Lapels -->
+  <polygon points="170,490 220,380 250,440 210,490" fill="#1e1b4b"/>
+  <polygon points="330,490 280,380 250,440 290,490" fill="#1e1b4b"/>
+
+  <!-- Neck -->
+  <rect x="225" y="270" width="50" height="70" rx="10" fill="#f59e0b"/>
+
+  <!-- Head Base -->
+  <ellipse cx="250" cy="225" rx="75" ry="90" fill="url(#skinGrad)" filter="url(#shadow)"/>
+
+  <!-- Front Hair Style -->
+  <path d="M 175 220 C 170 140 220 120 250 120 C 310 120 335 150 325 220 C 310 170 280 155 250 160 C 210 165 190 190 175 220 Z" fill="url(#hairGrad)"/>
+  <path d="M 175 210 C 160 270 165 310 175 340 C 185 300 185 240 180 210 Z" fill="url(#hairGrad)"/>
+  <path d="M 325 210 C 340 270 335 310 325 340 C 315 300 315 240 320 210 Z" fill="url(#hairGrad)"/>
+
+  <!-- Eyebrows -->
+  <path d="M 200 195 Q 215 190 230 195" stroke="#1e1b4b" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M 270 195 Q 285 190 300 195" stroke="#1e1b4b" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <!-- Eyes -->
+  <ellipse cx="215" cy="215" rx="8" ry="6" fill="#1e1b4b"/>
+  <circle cx="217" cy="213" r="2.5" fill="#ffffff"/>
+  <ellipse cx="285" cy="215" rx="8" ry="6" fill="#1e1b4b"/>
+  <circle cx="287" cy="213" r="2.5" fill="#ffffff"/>
+
+  <!-- Modern Glasses / Sleek Frame -->
+  <rect x="195" y="202" width="40" height="26" rx="8" fill="none" stroke="#6366f1" stroke-width="3.5"/>
+  <rect x="265" y="202" width="40" height="26" rx="8" fill="none" stroke="#6366f1" stroke-width="3.5"/>
+  <line x1="235" y1="214" x2="265" y2="214" stroke="#6366f1" stroke-width="3.5"/>
+
+  <!-- Nose -->
+  <path d="M 250 218 L 246 242 Q 250 246 254 242" stroke="#d97706" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Warm Smile -->
+  <path d="M 232 265 Q 250 282 268 265" stroke="#b45309" stroke-width="3.5" fill="#ffffff" stroke-linecap="round"/>
+
+  <!-- Small Bindi -->
+  <circle cx="250" cy="188" r="3" fill="#be123c"/>
+
+  <!-- Floating badges -->
+  <!-- UI/UX Badge (Left) -->
+  <g transform="translate(45, 170)">
+    <rect width="85" height="38" rx="19" fill="#1e1b4b" stroke="#818cf8" stroke-width="2"/>
+    <text x="42.5" y="24" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="12" font-weight="bold" text-anchor="middle">🎨 UI/UX</text>
+  </g>
+
+  <!-- Python Badge (Right) -->
+  <g transform="translate(370, 170)">
+    <rect width="85" height="38" rx="19" fill="#1e1b4b" stroke="#38bdf8" stroke-width="2"/>
+    <text x="42.5" y="24" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="12" font-weight="bold" text-anchor="middle">🐍 Python</text>
+  </g>
+
+  <!-- B.Tech IT Badge (Bottom) -->
+  <g transform="translate(170, 435)">
+    <rect width="160" height="42" rx="21" fill="#0f172a" stroke="#ec4899" stroke-width="2" filter="url(#shadow)"/>
+    <text x="80" y="26" fill="#fbcfe8" font-family="'Outfit', sans-serif" font-size="13" font-weight="bold" text-anchor="middle">⚡ B.Tech IT '28</text>
+  </g>
+</svg>

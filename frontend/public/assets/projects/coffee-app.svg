@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2c1810"/>
+      <stop offset="50%" stop-color="#1b0f0a"/>
+      <stop offset="100%" stop-color="#0d0805"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c67c4e"/>
+      <stop offset="100%" stop-color="#edd6c8"/>
+    </linearGradient>
+    <filter id="phoneShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" rx="16" fill="url(#bg)"/>
+
+  <!-- Background decorative rings -->
+  <circle cx="700" cy="80" r="180" fill="#c67c4e" fill-opacity="0.08"/>
+  <circle cx="120" cy="420" r="140" fill="#c67c4e" fill-opacity="0.05"/>
+
+  <!-- Left Content Info -->
+  <g transform="translate(60, 100)">
+    <rect width="110" height="28" rx="14" fill="#c67c4e" fill-opacity="0.2"/>
+    <text x="55" y="19" fill="#c67c4e" font-family="'Outfit', sans-serif" font-size="12" font-weight="700" text-anchor="middle">FIGMA • UI/UX</text>
+    
+    <text x="0" y="80" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="34" font-weight="800">Coffee Ordering</text>
+    <text x="0" y="120" fill="#c67c4e" font-family="'Outfit', sans-serif" font-size="34" font-weight="800">Mobile App UI</text>
+    
+    <text x="0" y="170" fill="#a8a29e" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="400">
+      <tspan x="0" dy="0">Sleek micro-interactions, artisan brew</tspan>
+      <tspan x="0" dy="24">customization, animated cart &amp; 3-step checkout.</tspan>
+    </text>
+
+    <!-- Tech tags -->
+    <g transform="translate(0, 240)">
+      <rect x="0" y="0" width="85" height="30" rx="15" fill="#382218" stroke="#c67c4e" stroke-width="1"/>
+      <text x="42.5" y="19" fill="#edd6c8" font-family="'Outfit', sans-serif" font-size="12" font-weight="600" text-anchor="middle">Figma</text>
+
+      <rect x="95" y="0" width="95" height="30" rx="15" fill="#382218" stroke="#c67c4e" stroke-width="1"/>
+      <text x="142.5" y="19" fill="#edd6c8" font-family="'Outfit', sans-serif" font-size="12" font-weight="600" text-anchor="middle">Wireframing</text>
+
+      <rect x="200" y="0" width="95" height="30" rx="15" fill="#382218" stroke="#c67c4e" stroke-width="1"/>
+      <text x="247.5" y="19" fill="#edd6c8" font-family="'Outfit', sans-serif" font-size="12" font-weight="600" text-anchor="middle">Prototype</text>
+    </g>
+  </g>
+
+  <!-- Right: Stylized Mobile Mockup Frame -->
+  <g transform="translate(480, 50)" filter="url(#phoneShadow)">
+    <!-- Phone Body -->
+    <rect width="250" height="410" rx="36" fill="#181514" stroke="#403b38" stroke-width="6"/>
+    <!-- Screen -->
+    <rect x="8" y="8" width="234" height="394" rx="30" fill="#0f0d0c"/>
+    <!-- Notch -->
+    <rect x="85" y="14" width="80" height="18" rx="9" fill="#181514"/>
+    
+    <!-- App UI Mockup Elements -->
+    <text x="30" y="65" fill="#a8a29e" font-family="'Outfit', sans-serif" font-size="11">Location</text>
+    <text x="30" y="82" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="13" font-weight="700">Chennai, Tamil Nadu 📍</text>
+    
+    <!-- Search Bar -->
+    <rect x="25" y="100" width="200" height="36" rx="12" fill="#25211e"/>
+    <text x="45" y="123" fill="#78716c" font-family="'Plus Jakarta Sans', sans-serif" font-size="11">Search artisan coffee...</text>
+    
+    <!-- Hero Banner Card -->
+    <rect x="25" y="150" width="200" height="90" rx="14" fill="#312620"/>
+    <rect x="35" y="160" width="55" height="20" rx="10" fill="#ed5151"/>
+    <text x="62.5" y="174" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="9" font-weight="700" text-anchor="middle">PROMO</text>
+    <text x="35" y="200" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="14" font-weight="700">Buy 1 Get 1 Free</text>
+    <text x="35" y="220" fill="#c67c4e" font-family="'Outfit', sans-serif" font-size="11">Special Hazelnut Latte</text>
+    
+    <!-- Coffee Card -->
+    <rect x="25" y="255" width="200" height="120" rx="14" fill="#1f1b19" stroke="#312620" stroke-width="1"/>
+    <rect x="35" y="265" width="70" height="70" rx="10" fill="#2c1f19"/>
+    <text x="70" y="308" fill="#c67c4e" font-size="28" text-anchor="middle">☕</text>
+    
+    <text x="115" y="282" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="13" font-weight="700">Caramel Macchiato</text>
+    <text x="115" y="298" fill="#78716c" font-family="'Outfit', sans-serif" font-size="10">Deep roast, oat milk</text>
+    <text x="115" y="325" fill="#c67c4e" font-family="'Outfit', sans-serif" font-size="14" font-weight="700">$ 4.50</text>
+    
+    <!-- Add to cart button -->
+    <rect x="175" y="308" width="38" height="28" rx="8" fill="#c67c4e"/>
+    <text x="194" y="326" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle">+</text>
+  </g>
+</svg>
