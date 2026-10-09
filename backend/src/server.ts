@@ -1,7 +1,9 @@
+
 import express, { Application, Request, Response } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import { connectDB } from './config/db';
+
 import authRoutes from './routes/authRoutes';
 import homeRoutes from './routes/homeRoutes';
 import aboutRoutes from './routes/aboutRoutes';
@@ -16,9 +18,12 @@ import navbarRoutes from './routes/navbarRoutes';
 import footerRoutes from './routes/footerRoutes';
 import settingsRoutes from './routes/settingsRoutes';
 import statsRoutes from './routes/statsRoutes';
-import { errorHandler, notFoundHandler } from './middleware/errorMiddleware';
 
-// Load environment variables
+import {
+  errorHandler,
+  notFoundHandler
+} from './middleware/errorMiddleware';
+
 dotenv.config();
 
 const app: Application = express();
@@ -37,10 +42,15 @@ const allowedOrigins = [
 app.use(
   cors({
     origin: (origin, callback) => {
-      if (!origin || allowedOrigins.includes(origin) || process.env.NODE_ENV !== 'production') {
+      if (
+        !origin ||
+        allowedOrigins.includes(origin) ||
+        process.env.NODE_ENV !== 'production'
+      ) {
         return callback(null, true);
       }
-      return callback(null, true);
+
+      return callback(new Error('Not allowed by CORS'));
     },
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
@@ -52,6 +62,15 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Root endpoint
+app.get('/', (_req: Request, res: Response) => {
+  res.status(200).json({
+    success: true,
+    message: 'Priya Portfolio Backend API is running!',
+    health: '/api/health'
+  });
+});
+
 // Health check endpoint
 app.get('/api/health', (_req: Request, res: Response) => {
   res.status(200).json({
@@ -61,7 +80,7 @@ app.get('/api/health', (_req: Request, res: Response) => {
   });
 });
 
-// Dynamic CMS API Routes
+// API routes
 app.use('/api/auth', authRoutes);
 app.use('/api/home', homeRoutes);
 app.use('/api/about', aboutRoutes);
@@ -77,7 +96,7 @@ app.use('/api/footer', footerRoutes);
 app.use('/api/settings', settingsRoutes);
 app.use('/api/stats', statsRoutes);
 
-// Catch 404
+// Handle unknown routes
 app.use(notFoundHandler);
 
 // Centralized error handler
@@ -85,10 +104,8 @@ app.use(errorHandler);
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`====================================================`);
-  console.log(`🚀 Priya P Portfolio Dynamic CMS API running on port ${PORT}`);
-  console.log(`📡 URL: http://localhost:${PORT}/api/health`);
-  console.log(`====================================================`);
+  console.log(`Priya P Portfolio Dynamic CMS API running on port ${PORT}`);
+  console.log(`Health check: http://localhost:${PORT}/api/health`);
 });
 
 export default app;
